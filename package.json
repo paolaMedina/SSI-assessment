@@ -1,0 +1,42 @@
+{
+  "name": "SSI-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development ./frontend/src/index.js --output ./frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./frontend/src/index.js --output ./frontend/static/frontend/main.js",
+    "watch": "webpack --mode development --watch ./frontend/src/index.js --output ./frontend/static/frontend/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paolaMedina/SSI-assessment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paolaMedina/SSI-assessment/issues"
+  },
+  "homepage": "https://github.com/paolaMedina/SSI-assessment#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "css-loader": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "primeicons": "^2.0.0",
+    "primereact": "^3.3.2",
+    "react-transition-group": "^4.3.0"
+  }
+}
