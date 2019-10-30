@@ -1,0 +1,19 @@
+[{
+        "model": "Docente.Docente",
+        "pk": 3,
+        "fields": {
+            "nombre": "Jairo Mendoza",
+            "identificacion": 123,
+            "created_at": "2019-02-14 00:00:00"
+        }
+    },
+    {
+        "model": "Docente.Docente",
+        "pk": 4,
+        "fields": {
+            "nombre": "Patricia Sanchez",
+            "identificacion": 1234,
+            "created_at": "2019-01-14 00:00:00"
+        }
+    }
+]
