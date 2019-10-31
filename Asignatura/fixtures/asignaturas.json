@@ -1,0 +1,13 @@
+[{
+    "model": "Asignatura.Asignatura",
+    "pk": 1,
+    "fields": {
+        "nombre": "Desarrollo de Software I",
+        "codigo": "123456789M",
+        "docente": 1,
+        "estudiantes": [1,2],
+        "created_at": "2019-01-14 00:00:00"
+        
+    }
+}
+]

@@ -5,6 +5,6 @@ from django.db import models
 
 class Estudiante (models.Model):
     nombre = models.CharField(max_length=100)
-    identificacion = models.PositiveIntegerField
-    pin = models.PositiveIntegerField
+    identificacion = models.PositiveIntegerField()
+    pin = models.PositiveIntegerField()
     created_at = models.DateTimeField(auto_now_add=True)

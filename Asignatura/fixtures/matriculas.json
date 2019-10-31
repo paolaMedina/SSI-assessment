@@ -1,0 +1,12 @@
+[{
+    "model": "Asignatura.Matricula",
+    "pk": 1,
+    "fields": {
+        "estudiante": 1,
+        "asignatura": 1,
+        "Calificacion": 5,
+        "created_at": "2019-01-14 00:00:00"
+        
+    }
+}
+]
