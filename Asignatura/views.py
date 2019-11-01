@@ -15,13 +15,6 @@ class listado(generics.ListCreateAPIView):
     queryset = Asignatura.objects.all()
     serializer_class = AsignaturaSerializer
 
-# class listadoMatricula(APIView):
-#     def get(self, request):
-#         codigo =self.request.query_params.get('codigo')
-#         matricula = get_object_or_404(Matricula, codigo=1)
-#         data = MatriculaSerializer(matricula).data
-#         return Response(data)
-
 class listadoMatricula(generics.ListAPIView):
     serializer_class = MatriculaSerializer
 
@@ -29,6 +22,12 @@ class listadoMatricula(generics.ListAPIView):
         codigo =self.request.query_params.get('codigo')
         return Matricula.objects.filter(asignatura__codigo=codigo)
 
+class historialEstudiante(generics.ListAPIView):
+    serializer_class = MatriculaSerializer
+
+    def get_queryset(self):
+        codigo =self.request.query_params.get('identificacion')
+        return Matricula.objects.filter(estudiante__identificacion=codigo)
 
 
 class listadoEstudiantes(APIView):
@@ -36,5 +35,6 @@ class listadoEstudiantes(APIView):
         asignatura = get_object_or_404(Asignatura, pk=pk)
         data = AsignaturaSerializer(asignatura).data
         return Response(data)
+
 
 

@@ -17,4 +17,9 @@ class MatriculaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Matricula
         fields = '__all__'
+
+    # def create(self, validated_data):
+    #     user = validated_data.get('user')
+    #     student = Matricula.objects.create(user=user, grade=grade)
+    #     return student
         
