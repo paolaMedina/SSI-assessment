@@ -39,19 +39,17 @@ class Report extends Component {
 
     consulta = () =>{
        console.log( this.state.filtroAsignatura)
-       axios.get(`/api/asignatura/${this.state.filtroAsignatura}`)
+       axios.get(`/api/matricula?codigo=${this.state.filtroAsignatura}`)
             .then(response => {
                 console.log(response.data)
-                // const publications = response.data.publications.map(element => ({
-                //     ...element,
-                //     authors: element.authors ? element.authors.reduce((acum, value, it) => `${acum} ${value.name} ${it == element.authors.length - 1 ? '' : '-'}`, '') : '-----',
-                //     areas: element.area ? element.area.reduce((acum, value, it) => `${acum} ${value.name} ${it == element.area.length - 1 ? '' : ','}`, '') : '-----',
-                //     offices: element.office ? element.office.reduce((acum, value, it) => `${acum} ${value.name} ${it == element.office.length - 1 ? '' : ','}`, '') : '-----',
-                //     crps: element.crp ? element.crp.reduce((acum, value, it) => `${acum} ${value.name} ${it == element.crp.length - 1 ? '' : ','}`, '') : '-----',
-                //     sent_emails: element.sentEmail ? element.sentEmail.reduce((acum, value, it) => `${acum} ${value} ${it == element.sentEmail.length - 1 ? '' : ','}`, '') : '-----'
-                // })
-                // );
-                // this.setState({ numberPublication: response.data.publications.length, data: publications, petition: response.data.publications, year: year });
+                const publications = response.data.map(element => ({
+                    estudiante: element.estudiante.nombre,
+                    identificacion: element.estudiante.identificacion,
+                    calificacion: element.calificacion
+                })
+                );
+                console.log(publications)
+                this.setState({  cars1: publications});
             })
             .catch(function (error) {
                 console.log(error.response.data);
