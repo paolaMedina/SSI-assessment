@@ -82,6 +82,7 @@ class Report extends Component {
                     materia: element.asignatura.nombre,
                     codigoMateria: element.asignatura.codigo,
                     docente: element.asignatura.docente.nombre,
+                    semestre: element.semestre,
                     calificacion: element.calificacion
                 })
                 );
@@ -140,6 +141,7 @@ class Report extends Component {
                     <DataTable value={this.state.dataEstudiante}  header={header  } ref={(el) => { this.dt = el; }}>
                         <Column field="materia" header="Asignatura"  style={{height: '3.5em'}}/>
                         <Column field="codigoMateria" header="Código Asignatura"  style={{height: '3.5em'}}/>
+                        <Column field="semestre" header="Semestre Matriculado"  style={{height: '3.5em'}}/>
                         <Column field="docente" header="Docente"  style={{height: '3.5em'}}/>
                         <Column field="calificacion" header="Calificación" style={{height: '3.5em'}}/>
                     </DataTable>
